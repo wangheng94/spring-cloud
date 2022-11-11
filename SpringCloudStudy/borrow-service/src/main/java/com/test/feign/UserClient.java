@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Auther wh
  * @Date 2022/11/11 15:29
  */
-@FeignClient("userservice")     //声明为userservice服务的HTTP请求客户端
+@FeignClient(value = "userservice", fallback = UserFallbackClient.class)     //声明为userservice服务的HTTP请求客户端
 public interface UserClient {
 
     //路径保证和其他微服务提供的一致即可
