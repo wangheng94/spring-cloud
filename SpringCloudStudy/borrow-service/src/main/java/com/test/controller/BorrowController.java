@@ -20,7 +20,7 @@ public class BorrowController {
     @Resource
     BorrowService service;
 
-    @RequestMapping("/borrow/{uid}")
+    @RequestMapping(value = "/borrow/{uid}", produces = {"application/json;charset=utf-8"})
     UserBorrowDetail findUserBorrows(@PathVariable("uid") int uid){
         return service.getUserBorrowDetailByUid(uid);
     }
