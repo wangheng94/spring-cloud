@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 书籍Controller
@@ -21,7 +22,9 @@ public class BookController {
     BookService bookService;
 
     @RequestMapping("/book/{bid}")
-    Book findBookById(@PathVariable("bid") int bid){
+    Book findBookById(@PathVariable("bid") int bid,
+                      HttpServletRequest request){
+        System.out.println(request.getHeader("Test"));
         return bookService.getBookById(bid);
     }
 }

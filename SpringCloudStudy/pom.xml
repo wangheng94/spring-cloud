@@ -11,6 +11,7 @@
         <module>eureka</module>
         <module>HystrixDashBoardApplication</module>
         <module>hystrixdashboard</module>
+        <module>gateway</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
