@@ -12,6 +12,7 @@
         <module>HystrixDashBoardApplication</module>
         <module>hystrixdashboard</module>
         <module>gateway</module>
+        <module>config</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
